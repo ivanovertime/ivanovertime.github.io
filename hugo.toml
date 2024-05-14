@@ -1,5 +1,5 @@
 title = "Ivan Over Time"
-baseURL = "https://example.com/"
+baseURL = "https://ivanovertime.netlify.app/"
 
 # Option 1 (recommended): adding the theme as a Hugo module
 #theme = "github.com/Lednerb/bilberry-hugo-theme/v4"
