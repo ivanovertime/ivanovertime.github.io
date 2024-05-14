@@ -1,0 +1,217 @@
+title = "Ivan Over Time"
+baseURL = "https://example.com/"
+
+# Option 1 (recommended): adding the theme as a Hugo module
+#theme = "github.com/Lednerb/bilberry-hugo-theme/v4"
+
+# Options 2 and 3: cloning/copying the theme files
+theme = "bilberry-hugo-theme/v4"
+
+# Generate the robots.txt file for SEO
+enableRobotsTXT = true
+
+# Change to one of your content languages defined at the end.
+DefaultContentLanguage = "en"
+
+# Enable / Disable Google Analytics statistics for your site
+googleAnalytics = ""
+
+# Enable / Disable comments on the articles via Disqus.
+disqusShortname = ""
+
+[params]
+# Custom CSS/JS modules that will be imported by the template.
+# Files are relative to the static/ directory or a URL.
+# Files are imported in the order they appear here, after
+# theme.css and theme.js, respectively.
+css_modules = ["custom.css"]
+js_modules = []
+
+# Description and meta data for the search engines
+author = "Ivan Alvarez"
+description = "Bilberry Premium Theme for Hugo."
+keywords = "blog,personal,portafolio,search,font awesome,pages,posts,multilingual,syntax highlighting,premium,shortcuts"
+
+# How many articles should be displayed at once?
+paginate = 7
+
+# Styling
+navBackgroundColor = "#303030"
+navTextColor = "#ECF0F1"
+headerTextColor = "#ECF0F1"
+
+highlightColor = "#A1A1A1"
+specialColor = "#7E807F"
+
+baseColor = "#303030"
+blockquoteBackgroundColor = "#424242"
+articleBackgroundColor = "#424242"
+
+textColor = "#ECF0F1"
+metaBorderColor = "#424242"
+metaTextColor = "#A1A1A1"
+
+bubbleColor = "#303030"
+bubbleBackgroundColor = "#7E807F"
+connectionLineColor = "#7E807F"
+
+pageBackgroundColor = "#303030"
+
+footerBorderColor = "#303030"
+footerBackgroundColor = "#303030"
+footerHeadlineColor = "#616161"
+
+# Enable / Disable MathJax
+enable_mathjax = false
+
+# Enable / Disable algolia search
+algolia_search = false
+
+# Enable / Disable comments on the articles via commento
+# commentoJsURL = "https://commento.lednerb.de/js/commento.js"
+
+# Enable / Disable Giscus comments
+giscus = false
+
+
+# Enable / Disable Utterances comments
+utterances = false
+
+# let hugo automatically resize and crop your images to the correct sizes
+# NB: When enabled the image files get renamed by adding additional information,
+#     even if the image has the correct sizes.
+resizeImages = true
+
+# Header configuration
+# your subtitle if you want to use any
+subtitle = "I'm passionate about open-source and digital privacy."
+
+# if you want to use libravatar or gravatar for the header image
+avatarEmail = "ivalvarez22@gmail.com"
+
+# set an path to the image file you want to use | overwrites avatar by email
+customImage = "/avatar.png"
+
+# define the icon you want to use for the overlay for the customImage or avatar.
+overlayIcon = "fa-hourglass-start"
+
+# always display the top navigation (with pages and search) on non-mobile screens
+permanentTopNav = true
+
+# always display the top navigation when scrolling
+# works only with permanentTopNav = true
+stickyNav = false
+
+# show a language chooser in the header
+showHeaderLanguageChooser = false
+
+# Content configuration
+# Enable an optional pinned page to display at the top of the index
+# pinnedPost = "/article/installing-bilberry-theme/"
+# Set to true to pin only to the first page, false to all pages
+# pinOnlyToFirstPage = true
+
+# enable automatic localization of the article's published date using Moment.js
+enableMomentJs = true
+
+# customize the date format | only works if Moment.js is disabled | only works with English month names
+# you can customize it with the options you find here:
+# https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
+dateFormat = "2006-01-02"
+
+# display the estimated reading time for an article
+showReadingTime = true
+
+# Minimum word count to display the Table of Contents
+tocMinWordCount = 400
+
+# Footer configuration
+showFooter = true
+
+# How many articles should be displayed at latest posts in the footer?
+# Set to -1 to hide the 'Latest Posts' column
+amountLatestPostsInFooter = 5
+
+# How many categories should be displayed in the footer section?
+# Set to -1 to hide the 'Categories' column
+amountCategoriesInFooter = 5
+
+# show a language chooser in the footer
+showFooterLanguageChooser = true
+
+# social media profile urls for the footer links
+showSocialMedia = true
+
+# define your links with FontAwesome 5 (only free icons are supported)
+# all icons https://fontawesome.com/icons?d=gallery&m=free
+# brand icons https://fontawesome.com/icons?d=gallery&s=brands&m=free
+socialMediaLinks = [
+    # { link = "https://twitter.com/TheRealLednerb", icon = "fab fa-twitter", rel = "me" },
+    { link = "https://github.com/ivanovertime", icon = "fab fa-github" },
+    { link = "https://github.com/ialvarez93", icon = "fab fa-linkedin" },
+]
+
+# show an archive link in the footer
+showArchive = true
+
+# archive grouping: "2006" by year, "2006-01" by month
+archiveDateGrouping = "2006-01"
+
+# credits line configuration
+copyrightBy = "by Ivan Alvarez"
+copyrightUseCurrentYear = true                                # set to true to always display the current year in the copyright
+copyrightUrl = "https://github.com/Lednerb"
+creditsText = "Bilberry Hugo Theme"
+creditsUrl = "https://github.com/Lednerb/bilberry-hugo-theme"
+
+
+# customize your available languages for your multi-lingual site
+# or delete one of the [Languages.xx] blocks to use the theme with only one supported language
+[Languages]
+[Languages.en.params]
+weight = 1
+title = "Ivan Over Time"
+[Languages.es.params]
+weight = 2
+title = "Ivan en el Tiempo"
+subtitle = "Me apasiona el código abierto y la privacidad digital."
+[Languages.ja.params]
+weight = 3
+title = "イヴァン・オーバータイム"
+subtitle = "私はオープンソースとデジタル プライバシーに情熱を持っています。"
+
+[markup]
+defaultMarkdownHandler = 'goldmark'
+[markup.goldmark]
+[markup.goldmark.renderer]
+# change to 'true' if you need to render raw HTML within your markdown content
+unsafe = true
+[markup.highlight]
+anchorLineNos = true
+codeFences = true
+guessSyntax = false
+hl_Lines = ''
+hl_inline = false
+lineAnchors = ''
+lineNoStart = 1
+lineNos = false
+lineNumbersInTable = true
+noClasses = true
+noHl = false
+style = 'monokai'
+tabWidth = 4
+[markup.tableOfContents]
+endLevel = 5
+ordered = false
+startLevel = 2
+
+# do NOT change anything below
+[taxonomies]
+author = "author"
+tag = "tags"
+category = "categories"
+series = "series"
+
+[outputs]
+home = ["HTML", "JSON", "RSS"]
+page = ["HTML"]

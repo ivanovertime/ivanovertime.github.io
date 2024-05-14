@@ -1,0 +1,17 @@
+code {
+    background: none;
+}
+
+.bilberry-hugo-theme #back-to-top-button {
+    background-color: #7E807F;
+    border-radius: 50%;
+}
+
+.inline-button {
+    color: white;
+
+}
+
+.inline-button:hover {
+    background-color: white;
+}
