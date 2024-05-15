@@ -14,10 +14,7 @@ enableRobotsTXT = true
 DefaultContentLanguage = "en"
 
 # Enable / Disable Google Analytics statistics for your site
-googleAnalytics = ""
-
-# Enable / Disable comments on the articles via Disqus.
-disqusShortname = ""
+googleAnalytics = "G-J5V2BK5JPS"
 
 [params]
 # Custom CSS/JS modules that will be imported by the template.
@@ -29,11 +26,11 @@ js_modules = []
 
 # Description and meta data for the search engines
 author = "Ivan Alvarez"
-description = "Bilberry Premium Theme for Hugo."
-keywords = "blog,personal,portafolio,search,font awesome,pages,posts,multilingual,syntax highlighting,premium,shortcuts"
+description = "I try to turn data into information, usually with code."
+keywords = "blog,personal,portafolio,data,software,development,"
 
 # How many articles should be displayed at once?
-paginate = 7
+paginate = 5
 
 # Styling
 navBackgroundColor = "#303030"
@@ -84,10 +81,10 @@ resizeImages = true
 
 # Header configuration
 # your subtitle if you want to use any
-subtitle = "I'm passionate about open-source and digital privacy."
+subtitle = "I try to turn data into information, usually with code."
 
 # if you want to use libravatar or gravatar for the header image
-avatarEmail = "ivalvarez22@gmail.com"
+# avatarEmail = ""
 
 # set an path to the image file you want to use | overwrites avatar by email
 customImage = "/avatar.png"
@@ -174,11 +171,11 @@ title = "Ivan Over Time"
 [Languages.es.params]
 weight = 2
 title = "Ivan en el Tiempo"
-subtitle = "Me apasiona el código abierto y la privacidad digital."
+subtitle = "Intento convertir datos en información, normalmente mediante código."
 [Languages.ja.params]
 weight = 3
 title = "イヴァン・オーバータイム"
-subtitle = "私はオープンソースとデジタル プライバシーに情熱を持っています。"
+subtitle = "通常はコードを使用して、データを情報に変換しようとします。"
 
 [markup]
 defaultMarkdownHandler = 'goldmark'
