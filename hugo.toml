@@ -14,7 +14,7 @@ enableRobotsTXT = true
 DefaultContentLanguage = "en"
 
 # Enable / Disable Google Analytics statistics for your site
-googleAnalytics = "G-J5V2BK5JPS"
+googleAnalytics = "G-KTXW8MLDKZ"
 
 [params]
 # Custom CSS/JS modules that will be imported by the template.
