@@ -1,11 +1,12 @@
 ---
 title: From Nuxt to Hugo
 date: 2024-05-12
-
+draft: true
 tags:
     - Nuxt
     - Hugo
 ---
+I've been wanting to use Hugo for a while and when it came time to update from Nuxt 2 to 3 I thought it would be great to give a go (get it?). Anyway, remember that Hugo and Nuxt serve different purposes. While Nuxt is great for dynamic apps, Hugo excels at creating fast, static websites so this is actually a for what it was design.
 
 1. **Understanding the Basics:**
     
@@ -35,9 +36,9 @@ tags:
     
     - **Nuxt 2 Build**: Nuxt builds your app dynamically. In Hugo, run `hugo` to generate static files.
     - **Deployment**: Deploy your Hugo site to a web server or a static hosting service.
-8. **Testing and Optimization**:
-    
-    - **Test Locally**: Use Hugo’s local server (`hugo server`) for testing.
-    - **Optimize**: Minify CSS, JavaScript, and images.
 
-Remember that Hugo and Nuxt serve different purposes. While Nuxt is great for dynamic apps, Hugo excels at creating fast, static websites. Good luck with your migration! 🚀
+>It's not DNS <br>
+>It can not be DNS <br>
+>It was DNS<br>
+
+ Good luck with your migration! 
