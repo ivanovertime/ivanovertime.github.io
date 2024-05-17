@@ -1,13 +1,20 @@
 ---
 title: From Nuxt to Hugo
+summary: "Here goes my summary"
 date: 2024-05-12
 draft: true
+
+icon: "fa-code-commit"
+categories:
+    - Project
 tags:
     - Nuxt
     - Hugo
 ---
+# Situation
 I've been wanting to use Hugo for a while and when it came time to update from Nuxt 2 to 3 I thought it would be great to give a go (get it?). Anyway, remember that Hugo and Nuxt serve different purposes. While Nuxt is great for dynamic apps, Hugo excels at creating fast, static websites so this is actually a for what it was design.
 
+# Solution 
 1. **Understanding the Basics:**
     
     - **Nuxt 2**: Nuxt is a powerful framework for building Vue.js applications. It provides server-side rendering (SSR), routing, and other features out of the box.

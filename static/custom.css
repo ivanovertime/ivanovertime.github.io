@@ -9,14 +9,19 @@ code {
 
 .inline-button {
     color: white;
-
 }
 
 .inline-button:hover {
     background-color: white;
 }
 
+/* .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
 .bilberry-hugo-theme header .logo img {
-	width: 90px;
-	height: 90px;
+    width: 90px;
+    height: 90px;
 }

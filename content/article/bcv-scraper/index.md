@@ -1,12 +1,13 @@
 ---
 title: Using the official exchange rate in Venezuela's e-commerce
-description: Latin America and Venezuela in particular, presents unique challenges for e-commerce, including local laws and  tax regulations required to engage with the consumer base. A simple web scraper built in Python with FastAPI can be useful for a software developer who wants to access the exchange rate from the official website of Banco Central de Venezuela.  We will briefly explore when this is a good idea  to a how to do it. 
+summary: "Venezuela has unique challenges for e-commerce. Local laws and  tax regulations required to engage with the consumer base. A simple web scraper built in Python with FastAPI can be useful for a software developer who wants to access the exchange rate from the official website of Banco Central de Venezuela. We will briefly explore when this is a good idea and how to do it. "
 date: 2024-01-19
+
 categories:
     - Web Scrapping 
+Tags:
+    - E-commerce
 ---
-Photo by [Frederick Medina](https://unsplash.com/@frederickjmedina?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/person-holding-two-brown-doughnuts-LxyT2CgQSj8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
-
 
 ## Situation
 
@@ -40,8 +41,12 @@ By using a web scraper built in Python with FastAPI, you can:
 - Create a custom API that exposes the scraped data as endpoints, which can be accessed by other developers or users who need the data for their own purposes.
 - Apply data analysis, visualization, or machine learning techniques to the scraped data, using the rich set of libraries and packages available in Python.
 
-I made a base public in ths repo. Let me know if you have any questions.
+I made a base public in ths [repo](https://github.com/ivanovertime/bcv_scraper).
 
+Let me know if you have any questions.
+
+# References
+Photo by [Frederick Medina](https://unsplash.com/@frederickjmedina?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/person-holding-two-brown-doughnuts-LxyT2CgQSj8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
 
 
 [^1]: E-commerce in Venezuela. <https://www.lloydsbanktrade.com/en/market-potential/venezuela/ecommerce>.

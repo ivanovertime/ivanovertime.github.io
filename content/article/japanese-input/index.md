@@ -1,7 +1,8 @@
 ---
 title: Japanese input in openSUSE Tumbleweed's KDE
-description: Here are the steps to install fcitx5 and fcitx5-mozc input method for Japanese in Opensuse's KDE
 date: 2024-01-15
+summary: "Here are the steps to install **fcitx5** and **fcitx5-mozc** input method for Japanese in **openSUSE Tumbleweed**."
+
 categories:
     - Japanese
 tags:
@@ -9,13 +10,9 @@ tags:
     - KDE
 ---
 
-<!-- ![Fast food on a red background](./muhammad-nadhif-fajriananda-QUVE0KDGfBE-unsplash.jpg) -->
-![Photo by Muhammad Nadhif Fajriananda on Unsplash](florian-klauer-nptLmg6jqDo-unsplash.jpg)  
-
-
 # Situation
 
-Recently I change from Ubuntu 22.10 to openSUSE Tumbleweed on my personal laptop. The wonderful thing about change is that always brings learning with it.
+Las year after a pretty bad blackout I decided to test the native BTRFS backups from openSUSE Tumbleweed and changed from Ubuntu 22.10 on my personal laptop. The wonderful thing about change is that always brings learning with it but on the forums was mostly GNOME. 
 
 Here are the steps to install **fcitx5** and **fcitx5-mozc** input method for Japanese in **openSUSE Tumbleweed**:
 
@@ -50,6 +47,10 @@ Select **Mozc** from the list of input methods and click on the **Add** button.
 You can now switch to the **Mozc** input method by pressing the **Ctrl + Space** keys.
 
 Let me know if you have any questions.
+
+# References
+
+Photo by <a href="https://unsplash.com/@frederickjmedina?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Frederick Medina</a> on <a href="https://unsplash.com/photos/person-holding-brown-bread-with-yellow-sliced-fruit-6SWHWcLyD-8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 
 [^1]: Japanese input in plasma 5.8 kde <https://forums.opensuse.org/t/japanese-input-in-plasma-5-8-kde/125211>
 [^2]: Localization/Japanese - ArchWiki. <https://wiki.archlinux.org/title/Localization/Japanese>.
