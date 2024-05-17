@@ -30,7 +30,7 @@ description = "I try to turn data into information, usually with code."
 keywords = "blog,personal,portafolio,data,software,development,"
 
 # How many articles should be displayed at once?
-paginate = 5
+paginate = 10
 
 # Styling
 navBackgroundColor = "#303030"
