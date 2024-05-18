@@ -22,10 +22,10 @@ googleAnalytics = "G-KTXW8MLDKZ"
 # Files are imported in the order they appear here, after
 # theme.css and theme.js, respectively.
 css_modules = ["custom.css"]
-js_modules = ["https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap"]
+js_modules = []
 
 # Description and meta data for the search engines
-author = "Ivan Alvarez"
+author = "Iván Alvarez"
 description = "I try to turn data into information, usually with code."
 keywords = "blog,personal,portafolio,data,software,development,"
 
@@ -33,9 +33,6 @@ keywords = "blog,personal,portafolio,data,software,development,"
 paginate = 10
 
 # Styling
-headlineFont="'Atkinson Hyperlegible'"
-contentFont="'Atkinson Hyperlegible'"
-articleFooterFont="'Atkinson Hyperlegible'"
 navBackgroundColor = "#303030"
 navTextColor = "#ECF0F1"
 headerTextColor = "#ECF0F1"
