@@ -1,6 +1,6 @@
 ---
 title: The Intern is downloading movies again
-summary: "What happens when you let tech savvy people with access to internet for 8hrs a day? I call **The Intern is downloading movies again** problem."
+summary: "What happens when you let tech savvy people with access to internet for 8hrs a day? I call it **The Intern is downloading movies again** problem."
 
 date: 2024-05-16
 categories: 
