@@ -115,7 +115,8 @@ showHeaderLanguageChooser = false
 # pinOnlyToFirstPage = true
 
 # enable automatic localization of the article's published date using Moment.js
-enableMomentJs = true
+enableMomentJs = false
+enableHighlightJs = false
 
 # customize the date format | only works if Moment.js is disabled | only works with English month names
 # you can customize it with the options you find here:

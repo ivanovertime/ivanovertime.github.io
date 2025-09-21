@@ -1,0 +1,46 @@
+{{/* Render hook for Markdown images to improve performance */}}
+{{ $src := .Destination }}
+{{ $alt := .Text | default (.PlainText | default "Image") }}
+{{ $title := .Title }}
+
+{{/* Default attributes */}}
+{{ $loading := "lazy" }}
+{{ $decoding := "async" }}
+{{ $fetchpriority := "low" }}
+
+{{/* Compute width/height using page resources first, then static, else skip */}}
+{{ $width := 0 }}
+{{ $height := 0 }}
+{{ $isRemote := or (hasPrefix (lower $src) "http://") (hasPrefix (lower $src) "https://") }}
+
+{{ if not $isRemote }}
+  {{/* Try page bundle resources */}}
+  {{ $res := .Page.Resources.GetMatch $src }}
+  {{ if not $res }}
+    {{/* Try without leading ./ */}}
+    {{ $res = .Page.Resources.GetMatch (replace $src "./" "") }}
+  {{ end }}
+  {{ if $res }}
+    {{ with $res }}
+      {{ if .Width }}
+        {{ $width = .Width }}
+      {{ end }}
+      {{ if .Height }}
+        {{ $height = .Height }}
+      {{ end }}
+      {{ $src = .RelPermalink }}
+    {{ end }}
+  {{ else }}
+    {{/* Fallback: check static/ path */}}
+    {{ $path := cond (hasPrefix $src "/") $src (printf "/%s" $src) }}
+    {{ $staticPath := printf "static%s" $path }}
+    {{ if fileExists $staticPath }}
+      {{ with (imageConfig $staticPath) }}
+        {{ $width = .Width }}
+        {{ $height = .Height }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+<img src="{{ $src | safeURL }}" alt="{{ $alt }}"{{ with $title }} title="{{ . }}"{{ end }}{{ if gt $width 0 }} width="{{ $width }}"{{ end }}{{ if gt $height 0 }} height="{{ $height }}"{{ end }} loading="{{ $loading }}" decoding="{{ $decoding }}" fetchpriority="{{ $fetchpriority }}">
