@@ -21,10 +21,11 @@ googleAnalytics = "G-KTXW8MLDKZ"
 # Files are relative to the static/ directory or a URL.
 # Files are imported in the order they appear here, after
 # theme.css and theme.js, respectively.
-css_modules = ["custom.css"]
-js_modules = [
+css_modules = [
     "https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap",
+    "custom.css",
 ]
+js_modules = []
 
 # Description and meta data for the search engines
 author = "Ivan Alvarez"
