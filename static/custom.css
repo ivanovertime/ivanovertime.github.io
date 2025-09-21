@@ -25,3 +25,9 @@ code {
     width: 90px;
     height: 90px;
 }
+
+/* Ensure embedded images in article content are never stretched */
+.bilberry-hugo-theme article .content img,
+.bilberry-hugo-theme article .content figure img {
+    height: auto !important;
+}
