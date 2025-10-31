@@ -2,7 +2,7 @@
 title: From Nuxt to Hugo
 summary: "Notes on migrating this site from Nuxt 2 to Hugo—why the switch made sense, what changed, and the steps that kept the move manageable."
 date: 2024-05-12
-draft: true
+draft: false
 
 icon: "fa-code-commit"
 categories:
