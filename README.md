@@ -1,115 +1,99 @@
 <p align="center">
-  <a href="" rel="noopener">
- <img width=100px height=100px src="./static/favicon.ico" alt="Project logo"></a>
+  <img width="100" height="100" src="./static/favicon.ico" alt="Ivan Over Time logo">
 </p>
 
-<h3 align="center">Ivan Over Time</h3>
+<h1 align="center">Ivan Over Time</h1>
 
-<div align="center">
-
-[![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![Netlify Status](
-https://api.netlify.com/api/v1/badges/b9595701-510e-411b-969e-6a0d348a2a5f/deploy-status
-)](https://app.netlify.com/sites/ivanovertime/deploys)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
-
-</div>
-
----
-
-<p align="center"> Few lines describing your project.
-    <br> 
+<p align="center">
+  <a href="https://app.netlify.com/sites/ivanovertime/deploys">
+    <img src="https://api.netlify.com/api/v1/badges/b9595701-510e-411b-969e-6a0d348a2a5f/deploy-status" alt="Netlify Status">
+  </a>
+  <a href="/LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
+  </a>
 </p>
 
-## 📝 Table of Contents
+Personal site and digital garden by Iván Álvarez. The site is a multilingual Hugo build that collects long-form writing, quick notes, and curated resources around data, software, and language learning.
 
-- [About](#about)
-- [Getting Started](#getting_started)
-- [Deployment](#deployment)
-- [Usage](#usage)
-- [Built Using](#built_using)
-- [TODO](../TODO.md)
-- [Contributing](../CONTRIBUTING.md)
-- [Authors](#authors)
-- [Acknowledgments](#acknowledgement)
+## About
 
-## 🧐 About <a name = "about"></a>
+- Static site generated with [Hugo](https://gohugo.io/) using a vendored copy of the [Bilberry theme](https://github.com/Lednerb/bilberry-hugo-theme).
+- Content is published in English, Spanish, and Japanese via Hugo's multilingual features.
+- Deployed automatically to Netlify at https://alvarezivan.net.ve/ after every push to `trunk`.
 
-Write about 1-2 paragraphs describing the purpose of your project.
+## Features
 
-## 🏁 Getting Started <a name = "getting_started"></a>
+- Multilingual layout with language-specific titles and subtitles.
+- Custom typography and styling via `static/custom.css` and Google Fonts.
+- Post types for articles, project pages, galleries, and status updates.
+- Built-in RSS, JSON index, and sitemap feeds produced during the Hugo build.
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+## Local Development
 
 ### Prerequisites
 
-What things you need to install the software and how to install them.
+- Hugo **extended** `>= 0.126.0` (matches the Netlify build version).
+- Git (for cloning and pulling the Bilberry theme submodule).
+- Optional: `dart-sass` if you need to rebuild theme styles locally, mirroring the Netlify pipeline.
 
-```
-Give examples
-```
+### Setup
 
-### Installing
-
-A step by step series of examples that tell you how to get a development env running.
-
-Say what the step will be
-
-```
-Give the example
+```bash
+git clone https://github.com/ivanovertime/ivanovertime.github.io.git
+cd ivanovertime.github.io
+git submodule update --init --recursive
 ```
 
-And repeat
+Start the development server with drafts and future-dated entries enabled:
 
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo.
-
-## 🔧 Running the tests <a name = "tests"></a>
-
-Explain how to run the automated tests for this system.
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
+```bash
+hugo server -D
 ```
 
-### And coding style tests
+Open `http://localhost:1313` in your browser. Hugo hot-reloads content, so saving Markdown files under `content/` will refresh the page immediately.
 
-Explain what these tests test and why
+## Content Workflow
+
+- Create a new article: `hugo new article/my-post/index.md`
+- Create a new page: `hugo new page/uses/index.md`
+- Drafts live alongside their translations; add `draft: true` to keep them local.
+- Assets placed next to the Markdown file are bundled automatically thanks to Hugo Page Bundles.
+
+Keep translations in language-specific sections (for example `content/article/my-post/index.md`, `content/article/my-post/index.es.md`). Hugo aligns them based on filename suffixes.
+
+## Project Structure
 
 ```
-Give an example
+content/        # Markdown sources for posts, pages, galleries, and status updates
+layouts/        # Hugo layout overrides layered on top of the Bilberry theme
+static/         # Static assets copied verbatim (CSS, manifest, images)
+themes/         # Bilberry theme as a Git submodule
+netlify.toml    # Build settings and cache headers for Netlify
+hugo.toml       # Global Hugo configuration (languages, params, theming)
 ```
 
-## 🎈 Usage <a name="usage"></a>
+## Deployment
 
-Add notes about how to use the system.
+- Netlify runs `hugo --gc --minify` using Hugo extended `0.126.0` on Ubuntu 24.04.
+- The build script installs Dart Sass so theme SCSS customizations compile consistently.
+- The generated site is published from the `public/` directory; push to `trunk` to trigger a deploy.
 
-## 🚀 Deployment <a name = "deployment"></a>
+To test a production build locally run:
 
-Add additional notes about how to deploy this on a live system.
+```bash
+hugo --gc --minify
+```
 
-## ⛏️ Built Using <a name = "built_using"></a>
+The output in `public/` can be served with any static file server.
 
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
+## Contributing
 
-## ✍️ Authors <a name = "authors"></a>
+Issues and pull requests are welcome. Please run `hugo server -D` locally to verify that content or layout changes render as expected, and share screenshots for visual updates.
 
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
+## Thanks
 
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
+- Grateful for the [Bilberry Hugo theme](https://github.com/Lednerb/bilberry-hugo-theme) and its maintainers, whose work powers the site's look and feel.
 
-## 🎉 Acknowledgements <a name = "acknowledgement"></a>
+## License
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- References
+Distributed under the [MIT License](LICENSE).
