@@ -1,51 +1,38 @@
 ---
 title: From Nuxt to Hugo
-summary: "Here goes my summary"
+summary: "Notes on migrating this site from Nuxt 2 to Hugo—why the switch made sense, what changed, and the steps that kept the move manageable."
 date: 2024-05-12
 draft: true
 
 icon: "fa-code-commit"
 categories:
-    - Project
+   - Project
 tags:
     - Nuxt
     - Hugo
 ---
 # Situation
-I've been wanting to use Hugo for a while and when it came time to update from Nuxt 2 to 3 I thought it would be great to give a go (get it?). Anyway, remember that Hugo and Nuxt serve different purposes. While Nuxt is great for dynamic apps, Hugo excels at creating fast, static websites so this is actually a for what it was design.
+I had wanted to use Hugo for a while, and when it came time to move my Nuxt 2 site forward I chose to migrate instead of upgrading to Nuxt 3. Nuxt excels at dynamic Vue apps, but this project is a content-first site. Hugo's static build pipeline, multi-language support, and minimal runtime footprint were a much better fit.
 
-# Solution 
-1. **Understanding the Basics:**
-    
-    - **Nuxt 2**: Nuxt is a powerful framework for building Vue.js applications. It provides server-side rendering (SSR), routing, and other features out of the box.
-    - **Hugo**: Hugo is a static site generator written in Go. It generates static HTML files from Markdown content and templates.
-2. **Content Migration**:
-    
-    - **Nuxt 2 Content**: If your Nuxt 2 site uses the content module, you’ll need to extract your content (such as blog posts, pages, etc.) from the Nuxt content directory.
-    - **Hugo Content**: Create a new Hugo project and organize your content in the `content` directory. Each content file should be in Markdown format.
-3. **Templates and Layouts**:
-    
-    - **Nuxt 2 Layouts**: Nuxt uses layouts to structure your pages. In Hugo, you’ll create templates and layouts using Go’s templating language.
-    - **Hugo Templates**: Learn about Hugo’s templating system and create templates for your homepage, blog posts, and other content types.
-4. **Front Matter and Metadata**:
-    
-    - **Nuxt 2 Front Matter**: Extract metadata (such as title, date, tags) from your Nuxt content files.
-    - **Hugo Front Matter**: Hugo uses front matter (in YAML, TOML, or JSON format) at the beginning of each content file. Define metadata there.
-5. **Routing and URLs**:
-    
-    - **Nuxt 2 Routes**: Nuxt automatically generates routes based on your folder structure. In Hugo, you’ll define your routes explicitly in the `config.toml` or `config.yaml`.
-    - **Hugo Permalinks**: Customize your URLs using Hugo’s permalink configuration.
-6. **Plugins and Features**:
-    
-    - **Nuxt 2 Plugins**: If you’re using Nuxt plugins (e.g., for SEO, analytics), find Hugo equivalents or adapt your approach.
-    - **Hugo Features**: Explore Hugo’s built-in features, such as taxonomies, shortcodes, and partials.
-7. **Build and Deployment**:
-    
-    - **Nuxt 2 Build**: Nuxt builds your app dynamically. In Hugo, run `hugo` to generate static files.
-    - **Deployment**: Deploy your Hugo site to a web server or a static hosting service.
+# Solution
+1. **Map the objectives**
+   - Audit what Nuxt is doing for you: data fetching, dynamic routes, plugins, and middleware.
+   - Decide what can become pre-generated content versus what still needs runtime logic.
+2. **Move the content first**
+   - Export Markdown from the Nuxt Content module (or your CMS) and drop it into Hugo's `content/` tree.
+   - Translate front matter into TOML/YAML front matter so Hugo can read titles, dates, and taxonomies.
+3. **Recreate layouts intentionally**
+   - Identify Nuxt layouts and Vue components that map to Hugo templates or partials.
+   - Rebuild only what adds value; Hugo's Go templates often need fewer abstractions.
+4. **Replace dynamic features**
+   - For features like search, consider Hugo's JSON outputs plus a lightweight client-side index.
+   - For forms or comments, integrate external services or serverless functions instead of writing Vue logic.
+5. **Tighten the build & deploy loop**
+   - `hugo server -D` gives fast local previews; `hugo --gc --minify` mirrors production.
+   - Deployment shrinks to uploading the `public/` folder or letting Netlify handle it.
 
->It's not DNS <br>
->It can not be DNS <br>
->It was DNS<br>
+> It's not DNS <br>
+> It cannot be DNS <br>
+> It was DNS
 
- Good luck with your migration! 
+Good luck with your migration! If you hit a snag, it's probably DNS—check it anyway.

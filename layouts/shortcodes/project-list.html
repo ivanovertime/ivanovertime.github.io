@@ -1,0 +1,16 @@
+{{- $projectCategory := "Project" -}}
+{{- $articles := where (where site.RegularPages "Type" "article") "Params.categories" "intersect" (slice $projectCategory) -}}
+{{- if gt (len $articles) 0 -}}
+<ul class="project-list">
+  {{- range sort $articles "Date" "desc" -}}
+  <li>
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{- with .Summary -}}
+    <p>{{ . | plainify }}</p>
+    {{- end -}}
+  </li>
+  {{- end -}}
+</ul>
+{{- else -}}
+<p>No project write-ups yet. Check back soon.</p>
+{{- end -}}
