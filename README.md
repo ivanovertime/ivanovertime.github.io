@@ -61,6 +61,12 @@ Open `http://localhost:1313` in your browser. Hugo hot-reloads content, so savin
 
 Keep translations in language-specific sections (for example `content/article/my-post/index.md`, `content/article/my-post/index.es.md`). Hugo aligns them based on filename suffixes.
 
+### Responsive images
+
+- Place source images inside the same page bundle as the Markdown (`content/article/my-post/image.png`).
+- Reference them with a shortcode or render hook that leverages Hugo image processing to create resized variants (`.Fit`, `.Resize`, or `.Fill`) and emits a `srcset`.
+- `static/custom.css` already forces inline and featured images to stay fluid (`width:auto; max-width:100%; height:auto;`), so they shrink cleanly on mobile while the generated `srcset` keeps them sharp on high DPI screens.
+
 ## Project Structure
 
 ```
